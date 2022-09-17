@@ -14,6 +14,9 @@ const addMessageToDOM = () => {
   notificationMessages.appendChild(notification);
 };
 
+const rxEvent$ = fromEvent(button, 'click');
+rxEvent$.subscribe(addMessageToDOM);
+
 /**
  * Your mission:
  *
